@@ -1,0 +1,27 @@
+[project]
+name = "backend-takehome"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "ANURAGJAMANKAR",email = "white.demon.aj@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "typer (>=0.15.2,<0.16.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "biopython (>=1.85,<2.0)"
+]
+
+[tool.poetry]
+packages = [{include = "backend_takehome", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+get-papers-list = "backend_takehome.cli:main"
